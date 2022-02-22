@@ -13,4 +13,4 @@ Run.create(category: 'Tempo')
 Run.create(category: 'Long Run')
 
 
-Log.create(distance:12.4, pace:'9 54', date: '02/22/22', notes: 'test', run: 1)
+Log.create(run_id: 1, distance: 12.3, pace: 'test', date: Date.now, notes: 'notes')
