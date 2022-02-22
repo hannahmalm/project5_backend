@@ -13,4 +13,6 @@
 # Run.create(category: 'Long Run')
 
 
-Log.create(distance: 12.3, pace: 'test', date: '2/22/22', notes: 'notes')
+Log.create(run_id: 1, distance: 12.3, pace: 'test pace', date: DateTime.now, notes: 'notes')
+Log.create(run_id: 1, distance: 11.3, pace: 'test2', date: DateTime.now, notes: 'notes2')
+Log.create(run_id: 1, distance: 10.3, pace: 'test3', date: DateTime.now, notes: 'notes3')
