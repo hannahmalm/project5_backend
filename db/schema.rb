@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_22_163702) do
+ActiveRecord::Schema.define(version: 2022_02_22_165052) do
 
   create_table "logs", force: :cascade do |t|
     t.integer "run_id"
     t.decimal "distance"
-    t.decimal "pace"
+    t.string "pace"
     t.date "date"
     t.string "notes"
     t.datetime "created_at", precision: 6, null: false
