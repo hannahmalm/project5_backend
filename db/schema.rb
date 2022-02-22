@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 2022_02_22_165052) do
 
   create_table "logs", force: :cascade do |t|
-    t.integer "run_id"
     t.decimal "distance"
     t.string "pace"
     t.date "date"
     t.string "notes"
+    t.integer "run_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

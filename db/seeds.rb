@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Run.create(category: 'Intervals')
-Run.create(category: 'Fartlek')
-Run.create(category: 'Tempo')
-Run.create(category: 'Long Run')
+# Run.create(category: 'Intervals')
+# Run.create(category: 'Fartlek')
+# Run.create(category: 'Tempo')
+# Run.create(category: 'Long Run')
 
 
-Log.create(run_id: 1, distance: 12.3, pace: 'test', date: Date.now, notes: 'notes')
+Log.create(distance: 12.3, pace: 'test', date: '2/22/22', notes: 'notes')
