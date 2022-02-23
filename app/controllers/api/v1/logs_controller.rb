@@ -1,9 +1,18 @@
 class Api::V1::LogsController < ApplicationController
 
+    before_action :set_log
 
+    #just want the logs associted with a specific type of run 
     def index 
-        @logs = Log.all 
+        @logs = @run.logs
         render json: @logs
+    end 
+
+
+    #api/v1/runs/1/logs
+    #run_id is within the logs table so you are finding all the logs associated with a run
+    def set_log 
+        @run = Run.find(params[:run_id])
     end 
 
     def create 
