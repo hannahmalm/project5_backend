@@ -8,9 +8,6 @@ class Api::V1::LogsController < ApplicationController
         render json: @logs
     end 
 
-
-   
-
     def create 
         @log = @run.logs.new(log_params)
         if @log.save 
