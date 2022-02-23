@@ -21,7 +21,7 @@ class Api::V1::RunsController < ApplicationController
 
     def destroy
         @run = Run.find(params[:id])
-        @run.destroy!
+        @run.destroy
     end 
 
     private run_params
