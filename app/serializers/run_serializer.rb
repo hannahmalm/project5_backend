@@ -1,3 +1,3 @@
 class RunSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :category, :total_distance
 end
