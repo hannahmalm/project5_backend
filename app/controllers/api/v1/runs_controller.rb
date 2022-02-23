@@ -24,7 +24,8 @@ class Api::V1::RunsController < ApplicationController
         @run.destroy
     end 
 
-    private run_params
+    private 
+    def run_params
         params.require(:run).permit(:category, :total_distance)
     end
 

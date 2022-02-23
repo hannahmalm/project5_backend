@@ -9,11 +9,7 @@ class Api::V1::LogsController < ApplicationController
     end 
 
 
-    #api/v1/runs/1/logs
-    #run_id is within the logs table so you are finding all the logs associated with a run
-    def find_log 
-        @run = Run.find(params[:run_id])
-    end 
+   
 
     def create 
         @log = @run.logs.new(log_params)
@@ -34,7 +30,18 @@ class Api::V1::LogsController < ApplicationController
         @log.destroy
     end 
 
-    private log_params
+    private 
+     #api/v1/runs/1/logs
+    #run_id is within the logs table so you are finding all the logs associated with a run
+    #Run.find(1).logs.find(1).run_id
+    def find_log 
+        @run = Run.find(params[:run_id])
+    end 
+
+
+    def log_params
         params.require(:log).permit(:distance, :pace, :notes, :date, :run_id)
     end
+
+
 end
