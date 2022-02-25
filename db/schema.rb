@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_25_200221) do
+ActiveRecord::Schema.define(version: 2022_02_25_200414) do
 
   create_table "logs", force: :cascade do |t|
     t.decimal "distance"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2022_02_25_200221) do
     t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "instructions"
   end
 
 end
