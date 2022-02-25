@@ -8,10 +8,12 @@ class Api::V1::LogsController < ApplicationController
         render json: @logs
     end 
 
+
+    #if the log saves, render the run
     def create 
         @log = @run.logs.new(log_params)
         if @log.save 
-            render json: @log 
+            render json: @run
         else
             render json: {error: 'Please complete required fields'}
         end    
@@ -23,8 +25,13 @@ class Api::V1::LogsController < ApplicationController
     end 
 
     def destroy
+        # binding.pry
         @log = Log.find(params[:id])
+        @run = Run.find(log.run_id)
         @log.destroy
+        render json: @run
+        #send back the run instead of the actual log
+
     end 
 
     private 
