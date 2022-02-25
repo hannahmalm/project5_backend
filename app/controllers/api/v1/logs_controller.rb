@@ -27,7 +27,8 @@ class Api::V1::LogsController < ApplicationController
     def destroy
         # binding.pry
         @log = Log.find(params[:id])
-        @run = Run.find(log.run_id)
+        # @run = Run.find(log.run_id)
+        @run = Run.find(params[:run_id])
         @log.destroy
         render json: @run
         #send back the run instead of the actual log
