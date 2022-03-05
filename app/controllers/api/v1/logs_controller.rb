@@ -24,6 +24,14 @@ class Api::V1::LogsController < ApplicationController
         render json: @log
     end 
 
+    def update 
+        binding.pry
+        @log = Log.find(params[:id])
+        @run = Run.find(params[:run_id])
+        @log.update(log_params)
+        render json: @run
+    end 
+
     def destroy
         # binding.pry
         @log = Log.find(params[:id])
